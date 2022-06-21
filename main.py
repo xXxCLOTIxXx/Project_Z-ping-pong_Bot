@@ -27,7 +27,7 @@ async def on_msg():
 					messageId = message.message_id
 					messageType = message.type
 					nick = message.author.nickname
-					if (uid, ct) not in old_message:
+					if (uid, messageId) not in old_message:
 						old_message.append((uid, ct))
 						print(f"\nName: {nick} | Content: {ct} | Chat: {title}")
 
