@@ -27,8 +27,8 @@ async def on_msg():
 					messageId = message.message_id
 					messageType = message.type
 					nick = message.author.nickname
-					if (uid, messageId) not in old_message:
-						old_message.append((uid, ct))
+					if messageId not in old_message:
+						old_message.append(messageId)
 						print(f"\nName: {nick} | Content: {ct} | Chat: {title}")
 
 						if content[0][0] == '/':
